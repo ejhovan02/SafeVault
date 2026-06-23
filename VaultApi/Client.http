@@ -1,0 +1,9 @@
+###
+POST /api/register
+Content-Type: application/json
+
+{
+  "username": "string",
+  "password": "string"
+}
+

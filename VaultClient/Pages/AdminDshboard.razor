@@ -1,0 +1,37 @@
+@page "/admin"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject IJSRuntime JS
+
+@using Microsoft.AspNetCore.Authorization
+
+@attribute [Authorize(Roles = "Admin")]
+
+<h2>Admin Dashboard</h2>
+<p>Welcome, Admin! You can manage users here.</p>
+
+<button class="btn btn-danger" @onclick="Logout">Logout</button>
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        // You can add any initialization logic here if needed
+    }
+    private async Task Logout()
+    {
+        try
+        {
+            // Clear the authentication token from local storage
+            await JS.InvokeVoidAsync("localStorage.removeItem", "authToken");
+        }
+        catch (Exception ex)
+        {
+            // Log the error if JS interop fails (optional but recommended)
+            Console.WriteLine($"Error clearing local storage: {ex.Message}");
+        }
+
+        // Redirect to the login page
+        Navigation.NavigateTo("/login");
+    }
+}

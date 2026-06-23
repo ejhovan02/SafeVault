@@ -1,0 +1,11 @@
+C:\C# Projects\SafeVault_V2\VaultShared\bin\Debug\net9.0\VaultShared.deps.json
+C:\C# Projects\SafeVault_V2\VaultShared\bin\Debug\net9.0\VaultShared.dll
+C:\C# Projects\SafeVault_V2\VaultShared\bin\Debug\net9.0\VaultShared.pdb
+C:\C# Projects\SafeVault_V2\VaultShared\obj\Debug\net9.0\VaultShared.GeneratedMSBuildEditorConfig.editorconfig
+C:\C# Projects\SafeVault_V2\VaultShared\obj\Debug\net9.0\VaultShared.AssemblyInfoInputs.cache
+C:\C# Projects\SafeVault_V2\VaultShared\obj\Debug\net9.0\VaultShared.AssemblyInfo.cs
+C:\C# Projects\SafeVault_V2\VaultShared\obj\Debug\net9.0\VaultShared.csproj.CoreCompileInputs.cache
+C:\C# Projects\SafeVault_V2\VaultShared\obj\Debug\net9.0\VaultShared.dll
+C:\C# Projects\SafeVault_V2\VaultShared\obj\Debug\net9.0\refint\VaultShared.dll
+C:\C# Projects\SafeVault_V2\VaultShared\obj\Debug\net9.0\VaultShared.pdb
+C:\C# Projects\SafeVault_V2\VaultShared\obj\Debug\net9.0\ref\VaultShared.dll

@@ -1,0 +1,57 @@
+@page "/register"
+@using VaultShared
+@inject HttpClient Http
+
+<h2>Register New User</h2>
+
+@if (!string.IsNullOrEmpty(successMessage)) {
+    <div class="alert alert-success">@successMessage</div>
+}
+@if (!string.IsNullOrEmpty(errorMessage)) {
+    <div class="alert alert-danger">@errorMessage</div>
+}
+
+<EditForm Model="model" OnValidSubmit="HandleSubmit">
+    <div class="mb-3">
+        <label>Username:</label>
+        <InputText id="username" @bind-Value="model.UserName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Email:</label>
+        <InputText id="email" @bind-Value="model.Email" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Password:</label>
+        <!-- IMPORTANT: Bind to a temporary property or map it before sending -->
+        <InputText id="password" @bind-Value="model.PasswordHash" type="password" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+</EditForm>
+
+@code {
+    private User model = new();
+    private string successMessage = string.Empty;
+    private string errorMessage = string.Empty;
+
+    private async Task HandleSubmit()
+    {
+        try {
+            // The model.PasswordHash field now contains the raw password from the input
+            // The backend will hash it immediately
+            var response = await Http.PostAsJsonAsync("api/users/register", model);
+            
+            if (response.IsSuccessStatusCode) {
+                successMessage = "User registered successfully! Please login.";
+                model = new User();
+            } else {
+                var error = await response.Content.ReadAsStringAsync();
+                errorMessage = $"Error: {error}";
+            }
+        } catch (Exception ex) {
+            errorMessage = $"Error: {ex.Message}";
+        }
+    }
+}

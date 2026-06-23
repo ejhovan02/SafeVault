@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "v+1O93Szqdc=",
+  "success": true,
+  "projectFilePath": "C:\\C# Projects\\SafeVault_V2\\VaultShared\\VaultShared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Eric Hovan\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.15\\microsoft.netcore.app.ref.9.0.15.nupkg.sha512",
+    "C:\\Users\\Eric Hovan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.15\\microsoft.windowsdesktop.app.ref.9.0.15.nupkg.sha512",
+    "C:\\Users\\Eric Hovan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.15\\microsoft.aspnetcore.app.ref.9.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}
